@@ -3,3 +3,5 @@
 - type: rss
   icon: fas fa-rss
   noblank: true
+- type: email
+  icon: fas fa-envelope
