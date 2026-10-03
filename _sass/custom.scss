@@ -1,0 +1,112 @@
+/* Personal additions to Chirpy; keep the upstream layout and reading styles. */
+.profile-intro {
+  margin: 1.25rem 0 2rem;
+  padding: 1.5rem 0 1.75rem;
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+.eyebrow, .focus-number {
+  color: var(--field-accent);
+  font: 600 .7rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
+  letter-spacing: .12em;
+}
+
+.profile-intro h1 {
+  margin: .8rem 0 1rem;
+  color: var(--heading-color);
+  font-size: clamp(2.5rem, 5vw, 3.7rem);
+  font-weight: 750;
+  letter-spacing: -.055em;
+  line-height: 1.12;
+}
+
+.accent { color: var(--field-accent); }
+.intro-lead { font-size: 1.2rem; color: var(--heading-color); }
+.intro-description { max-width: 40rem; color: var(--text-muted-color); line-height: 1.9; }
+
+.focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: 0;
+  margin: 1.3rem 0 1.6rem;
+  list-style: none;
+}
+
+.focus-tags li {
+  border: 1px solid var(--main-border-color);
+  border-radius: .35rem;
+  padding: .35rem .65rem;
+  font: .75rem/1.6 ui-monospace, SFMono-Regular, Consolas, monospace;
+  color: var(--text-muted-color);
+}
+
+.intro-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.intro-actions a { border-bottom: 0 !important; font-size: .9rem; font-weight: 600; }
+.intro-primary { background: var(--field-accent); color: var(--field-button-text) !important; padding: .7rem 1rem; border-radius: .4rem; }
+.intro-primary:hover { filter: brightness(.92); }
+.intro-secondary { padding: .7rem .25rem; }
+.intro-actions span { margin-left: .5rem; }
+
+.focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; margin: 0 0 2.5rem; }
+
+a.focus-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem;
+  border: 1px solid var(--main-border-color) !important;
+  border-radius: .55rem;
+  background: var(--card-bg);
+  color: var(--text-color);
+  transition: border-color .15s ease;
+  text-decoration: none;
+}
+
+a.focus-card:hover { border-color: var(--field-accent) !important; }
+.focus-card h2 { margin: .8rem 0 .6rem; font-size: 1.03rem; line-height: 1.4; color: var(--heading-color); }
+.focus-card p { color: var(--text-muted-color); font-size: .82rem; line-height: 1.8; }
+.focus-link { margin-top: auto; color: var(--field-accent); font-size: .8rem; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.section-heading h2 { font-size: 1.15rem; margin: 0; }
+.section-heading a { font-size: .8rem; }
+.blog-tools { display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 1.5rem 0 2rem; }
+.topic-section { padding: 1.2rem 0; border-top: 1px solid var(--main-border-color); scroll-margin-top: 5rem; }
+.topic-section h2 { margin-top: .6rem; font-size: 1.2rem; }
+.topic-empty { color: var(--text-muted-color); font-size: .9rem; }
+.note-list { list-style: none; padding: 0; }
+.note-list li { display: flex; align-items: baseline; gap: 1rem; margin: .8rem 0; }
+.note-list time { flex-shrink: 0; color: var(--text-muted-color); font: .8rem/1.7 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.empty-note { margin: 2rem 0; padding: 1.25rem; border: 1px solid var(--main-border-color); border-radius: .5rem; }
+.empty-note p:last-child { margin-bottom: 0; }
+
+html {
+  --field-accent: #08766d;
+  --field-button-text: #fff;
+}
+
+html[data-bs-theme='dark'] {
+  --field-accent: #65d9c4;
+  --field-button-text: #111b25;
+  --link-color: #65d9c4;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-bs-theme]), html[data-bs-theme='system'] {
+    --field-accent: #65d9c4;
+    --field-button-text: #111b25;
+    --link-color: #65d9c4;
+  }
+}
+
+a:focus-visible, button:focus-visible { outline: 2px solid var(--field-accent); outline-offset: 4px; }
+
+@media (max-width: 680px) {
+  .focus-grid { grid-template-columns: 1fr; }
+  .focus-card h2 { font-size: 1.1rem; }
+  .profile-intro { padding-top: .8rem; }
+  .note-list li { flex-direction: column; gap: .15rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.focus-card { transition: none; }
+}

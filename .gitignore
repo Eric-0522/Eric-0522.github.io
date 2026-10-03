@@ -3,3 +3,8 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+.bundle/
+.build-support/
+.preview.log
+.preview-error.log

@@ -1,0 +1,45 @@
+---
+title: Blog
+icon: fas fa-pen-nib
+order: 4
+permalink: /blog/
+---
+
+<p>研究、逆向分析與解題過程中的技術筆記。文章依主題整理，也可以使用搜尋找到關鍵字。</p>
+<nav class="blog-tools" aria-label="文章索引">
+  <a href="{{ '/categories/' | relative_url }}">分類索引</a>
+  <a href="{{ '/tags/' | relative_url }}">標籤索引</a>
+  <a href="{{ '/archives/' | relative_url }}">時間索引</a>
+</nav>
+
+{% for topic in site.data.topics %}
+  <section id="{{ topic.id }}" class="topic-section" aria-labelledby="{{ topic.id }}-title">
+    <h2 id="{{ topic.id }}-title">{{ topic.name }}</h2>
+    <p class="text-muted">{{ topic.description }}</p>
+    {% assign topic_posts = site.posts | where_exp: 'post', 'post.categories contains topic.name' %}
+    {% if topic_posts.size > 0 %}
+      <ul class="note-list">
+        {% for post in topic_posts %}
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y/%m/%d' }}</time>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="topic-empty">這個主題的筆記整理中。</p>
+    {% endif %}
+  </section>
+{% endfor %}
+
+<section class="topic-section" aria-labelledby="all-notes-title">
+  <h2 id="all-notes-title">所有文章</h2>
+  <ul class="note-list">
+    {% for post in site.posts %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y/%m/%d' }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
