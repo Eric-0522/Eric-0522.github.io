@@ -14,7 +14,7 @@ timezone: Asia/Taipei
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Eric # the main title
+title: Eric Blog # the main title and og:site_name
 
 tagline: Fuzzing · Reverse · Malware Analysis
 
