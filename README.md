@@ -58,6 +58,14 @@ toc: true
 
 Blog 依照 `categories` 精確名稱分類；文章可以同時出現在 Reverse Engineering 和 CTF Write-ups。`tags` 使用小寫英文與連字號。程式碼使用 fenced code block 並指定語言；流程圖可在 front matter 加入 `mermaid: true`。
 
+## HackMD CTF 筆記
+
+已匯入 HackMD 的 `is1abCTF2025-writeup`（13 篇）及 `AIS3_Pre_exam 2026`（12 篇），共 25 篇。文章保留原文與程式碼，每篇均附 HackMD 來源連結；原有 81 張圖片保存於 `assets/img/writeups/`。
+
+Blog 提供兩場比賽的標籤入口。文章日期沿用匯入時 HackMD 列表顯示的日期，不代表已確認的首次發表時間。原始標籤另記錄於文章的 `source_tag`，網站標籤則使用 `is1ab-ctf-2025` 與 `ais3-pre-exam-2026`。
+
+`dg-server-rev` 原文的 8 個 `screenshot placeholder` 並未附上圖片，保留為 Markdown 原始碼註解，避免公開頁面顯示破圖。兩篇 dg-server 筆記的 3 處 Windows 本機腳本連結改為檔名與未附檔說明；原文內嵌的程式碼仍完整保留。HackMD 的 `python=` 程式碼區塊轉為 Jekyll 支援的 `python`，並保護程式碼中的 Liquid 符號。
+
 ## 個人資料補充清單
 
 - [ ] 確認公開顯示名稱；目前使用 Eric 與已知 GitHub 帳號。
