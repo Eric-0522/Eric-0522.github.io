@@ -66,6 +66,10 @@ Blog 提供兩場比賽的標籤入口。文章日期沿用匯入時 HackMD 列�
 
 `dg-server-rev` 原文的 8 個 `screenshot placeholder` 並未附上圖片，保留為 Markdown 原始碼註解，避免公開頁面顯示破圖。兩篇 dg-server 筆記的 3 處 Windows 本機腳本連結改為檔名與未附檔說明；原文內嵌的程式碼仍完整保留。HackMD 的 `python=` 程式碼區塊轉為 Jekyll 支援的 `python`，並保護程式碼中的 Liquid 符號。
 
+## HackMD T5Camp 筆記
+
+已匯入「T5Camp 2026 惡意程式分析」，歸入 Malware Analysis。文章保留原文與 HackMD 來源，62 張分析截圖保存於 `assets/img/t5camp-2026/`；日期沿用 HackMD 閱讀頁顯示的最後編輯日期（2025-11-30）。原文末尾只有 `malwa2 分析` 標題，未另行補寫內容。
+
 ## 個人資料補充清單
 
 - [ ] 確認公開顯示名稱；目前使用 Eric 與已知 GitHub 帳號。
